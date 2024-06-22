@@ -4,10 +4,6 @@ import "./globals.css";
 
 import {
   ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
 } from '@clerk/nextjs'
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,13 +21,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
     <html lang='en'>
-      <body>
-        <SignedOut>
-          <SignInButton />
-        </SignedOut>
-        <SignedIn>
-          <UserButton />
-        </SignedIn>
+      <body className="inter">
         {children}
       </body>
     </html>
